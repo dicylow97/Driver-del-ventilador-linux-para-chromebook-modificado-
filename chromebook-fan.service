@@ -1,0 +1,19 @@
+[Unit]
+Description=Control Automatico de Ventilador Chromebook
+# Espera a que el sistema básico esté listo
+After=multi-user.target
+
+[Service]
+# Ejecuta el script usando la ruta completa de python3 y del script
+ExecStart=/usr/bin/python3 /usr/local/bin/fan_control.py
+# Reinicia el script si llega a fallar por algún error
+Restart=always
+RestartSec=10
+# Ejecutar como root es obligatorio para controlar el ventilador
+User=root
+# Esto ayuda a que los mensajes del script se vean en tiempo real con journalctl
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+# Esto es lo que permite que se active solo al arrancar
+WantedBy=multi-user.target
