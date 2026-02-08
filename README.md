@@ -1,4 +1,4 @@
-# 🐧 Chromebook Fan Control for Linux (Fedora)
+# 🐧 Chromebook Fan Control for Linux
 
 Este proyecto permite tomar el control inteligente del ventilador en Chromebooks con distribuciones de Linux (especialmente Fedora), evitando que el hardware lo apague automáticamente. Incluye un script en Python con lógica de suavizado (histéresis) y un instalador automático.
 
